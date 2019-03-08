@@ -1,3 +1,4 @@
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class Test2 {
@@ -11,6 +12,17 @@ public class Test2 {
     public void before(){
         System.out.println("before class");
 
+    }
+
+    @Test
+    void test2(){
+        System.out.println("test ng2");
+    }
+
+    @Test
+    void ast3(){
+        Assert.assertEquals(1,2);
+//        Assert.fail();
     }
 
     @AfterClass

@@ -16,7 +16,7 @@ import java.util.Map;
 
 public class Scenario1{
 
-    Logger logger = Logger.getLogger(CalculatorPage.class.getName());
+    Logger logger = Logger.getLogger(Scenario1.class.getName());
 
     private HomePage homePage;
     private CalculatorPage calculatorPage;

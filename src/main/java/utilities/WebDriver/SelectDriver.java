@@ -12,7 +12,7 @@ public class SelectDriver {
     {
         String browser = null;
 
-        if(browser == null)
+        if(bro == null)
         {
             browser = "firefox";
         }

@@ -1,5 +1,6 @@
 package com.pages;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +10,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class HomePage extends BasePage {
+
+    Logger logger = Logger.getLogger(HomePage.class.getName());
 
     @FindBy(xpath = "//*[@id=\"nav-secondaire\"]/div[1]/ul/li[4]/a/span")
     WebElement loansBtn;
@@ -34,6 +37,8 @@ public class HomePage extends BasePage {
             waitUtils.getElementAfterMediumWait(loansBtn).click();
 //            loansBtn.click();
             driver.findElement(By.linkText("Mortgage payment calculator")).click();
+
+            logger.info("navigated to calc page");
         }catch (NoSuchElementException e)
         {
             System.out.println(e);
